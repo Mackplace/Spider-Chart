@@ -4,7 +4,7 @@ var w = 500,
 var colorscale = d3.scale.category20();
 
 //Legend titles
-var LegendOptions = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+var LegendOptions = ['Monday','Tuesday','Wednesday','Thursday','Saturday','Sunday'];
 
 
 
@@ -62,6 +62,45 @@ var d = [
     ]
 ];
 
+var d3 = [
+    [
+        {axis:"Eating",value:0.166},
+        {axis:"Enter Home",value:0.177},
+        {axis:"Meal Preparation",value:0.25},
+        {axis:"Sleeping",value:0.2708},
+        {axis:"Wash Dishes",value:0.1145},
+        {axis:"Work",value:0.1354}
+    ],[
+        {axis:"Eating",value:0.1770},
+        {axis:"Enter Home",value:0.1979},
+        {axis:"Meal Preparation",value:0.40625},
+        {axis:"Sleeping",value:0.2291},
+        {axis:"Wash Dishes",value:0.09375},
+        {axis:"Work",value:0.0625}
+    ],[
+        {axis:"Eating",value:0.1458},
+        {axis:"Enter Home",value:0.15625},
+        {axis:"Meal Preparation",value:0.375},
+        {axis:"Sleeping",value:0.1875},
+        {axis:"Wash Dishes",value:0.1458},
+        {axis:"Work",value:0.125}
+    ],[
+        {axis:"Eating",value:0.1458},
+        {axis:"Enter Home",value:0.2708},
+        {axis:"Meal Preparation",value:0.4270},
+        {axis:"Sleeping",value:0.28125},
+        {axis:"Wash Dishes",value:0.1041},
+        {axis:"Work",value:0.125}
+    ],[
+        {axis:"Eating",value:0.1875},
+        {axis:"Enter Home",value:0.2916},
+        {axis:"Meal Preparation",value:0.2291},
+        {axis:"Sleeping",value:0.2395},
+        {axis:"Wash Dishes",value:0.125},
+        {axis:"Work",value:0.2291}
+    ]
+];
+
 var d2 = [
     [
         {axis:"Eating",value:0.125},
@@ -95,7 +134,7 @@ var mycfg = {
 
 //Call function to draw the Radar chart
 //Will expect that data is in %'s
-RadarChart.draw("#chart", d, mycfg);
+RadarChart.draw("#chart3",d3, mycfg);
 
 
 ////////////////////////////////////////////
@@ -120,7 +159,7 @@ var text = svg.append("text")
     .attr("fill", "#C9DCB3")
     .text("Percentage per activity");
 
-//Initiate Legend	
+//Initiate Legend
 var legend = svg.append("g")
         .attr("class", "legend")
         .attr("height", 100)
@@ -150,3 +189,9 @@ legend.selectAll('text')
     .attr("fill", "#F2F6D0")
     .text(function(d) { return d; })
 ;
+/**
+ * Created by Mario Cifuentes on 9/10/2016.
+ */
+/**
+ * Created by Mario Cifuentes on 9/10/2016.
+ */

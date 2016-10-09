@@ -4,7 +4,7 @@ var w = 500,
 var colorscale = d3.scale.category20();
 
 //Legend titles
-var LegendOptions = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+var LegendOptions = ['Monday','Tuesday','Wednesday','Thursday','Saturday','Sunday'];
 
 
 
@@ -95,7 +95,7 @@ var mycfg = {
 
 //Call function to draw the Radar chart
 //Will expect that data is in %'s
-RadarChart.draw("#chart", d, mycfg);
+RadarChart.draw("#chart2", d2, mycfg);
 
 
 ////////////////////////////////////////////
@@ -120,7 +120,7 @@ var text = svg.append("text")
     .attr("fill", "#C9DCB3")
     .text("Percentage per activity");
 
-//Initiate Legend	
+//Initiate Legend
 var legend = svg.append("g")
         .attr("class", "legend")
         .attr("height", 100)
@@ -150,3 +150,6 @@ legend.selectAll('text')
     .attr("fill", "#F2F6D0")
     .text(function(d) { return d; })
 ;
+/**
+ * Created by Mario Cifuentes on 9/10/2016.
+ */
